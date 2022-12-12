@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "spring.TWILIO_AUTH_TOKEN",
+    "type": "java.lang.String",
+    "description": "The token for authenticating with Twilio"
+  },
+  {
+    "name": "spring.TWILIO_SID",
+    "type": "java.lang.String",
+    "description": "The account SID for authenticating with Twilio"
+  },
+  {
+    "name": "spring.CAT_API_KEY",
+    "type": "java.lang.String",
+    "description": "The API key to retrieve pictures of cats"
+  },
+  {
+    "name": "spring.TWILIO_PHONE_NUMBER",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.TWILIO_PHONE_NUMBER'"
+  }
+]}

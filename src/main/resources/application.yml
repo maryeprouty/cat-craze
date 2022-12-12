@@ -1,0 +1,9 @@
+aws:
+  secretsmanager:
+    enabled: true
+
+spring:
+  config.import: aws-secretsmanager:catCraze/catApiKey;catCraze/twilio
+#  TWILIO_AUTH_TOKEN: '3edb3cb6af552a7b129bca0213b37d7c'
+#  TWILIO_SID: 'AC9023478fcbc7bb08b4e88921150eca59'
+#  TWILIO_PHONE_NUMBER: '8503745949'
