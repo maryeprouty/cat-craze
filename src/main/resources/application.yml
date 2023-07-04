@@ -4,3 +4,8 @@ aws:
 
 spring:
   config.import: aws-secretsmanager:catCraze/catApiKey;catCraze/twilio
+  datasource.url: ##
+  datasource.username: ##
+  datasource.password: ##
+  jpa.database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#  jpa.hibernate.ddl-auto: update

@@ -34,6 +34,22 @@
 		</dependency>
 		
 		<dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-data-jpa</artifactId>
+	    </dependency>
+	    
+	    <dependency>
+	        <groupId>mysql</groupId>
+	        <artifactId>mysql-connector-java</artifactId>
+	    </dependency>
+	    
+	    <dependency>
+		    <groupId>org.hibernate.javax.persistence</groupId>
+		    <artifactId>hibernate-jpa-2.1-api</artifactId>
+		    <version>1.0.0.Final</version>
+		</dependency>
+		
+		<dependency>
             <groupId>com.twilio.sdk</groupId>
             <artifactId>twilio</artifactId>
             <version>8.8.0</version>
@@ -51,6 +67,12 @@
             </exclusions>
         </dependency>
         
+        <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-function-adapter-aws</artifactId>
+			<version>3.1.4</version>
+		</dependency>
+        
 	</dependencies>
 
 	<build>
@@ -58,11 +80,27 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<dependencies>
+					<dependency>
+						<groupId>org.springframework.boot.experimental</groupId>
+						<artifactId>spring-boot-thin-layout</artifactId>
+						<version>1.0.27.RELEASE</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 				<plugin>
 	            <groupId>org.apache.maven.plugins</groupId>
 	            <artifactId>maven-compiler-plugin</artifactId>
             </plugin>
+            <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-shade-plugin</artifactId>
+		        <configuration>
+		            <createDependencyReducedPom>false</createDependencyReducedPom>
+		            <shadedArtifactAttached>true</shadedArtifactAttached>
+		            <shadedClassifierName>shaded</shadedClassifierName>
+		        </configuration>
+		    </plugin>
 		</plugins>
 	</build>
 
